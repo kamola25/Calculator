@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
-    private Integer first,second,result,result1,result2,result3,result4,result5;
+    private Integer first,second,result,result1,result2,result3;
     private Boolean isOperationClick;
     private String operation;
     @SuppressLint("MissingInflatedId")
@@ -125,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
                     first = 0;
                     second = 0;
                     break;
+            case R.id.negative:
+                first=Integer.valueOf(textView.getText().toString());
+                Integer result5=first*(-1);
+                textView.setText(Integer.toString(result5));
+                isOperationClick=false;
+                break;
 
         }
     }
@@ -182,9 +188,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case "%":
                         second=Integer.valueOf(textView.getText().toString());
-                        result4=first*second/100;
-                        textView.setText(result4.toString());
+                        double result4=first*second/100;
+                        textView.setText(Double.toString(result4));
                         break;
+
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + operation);
                 }
                 isOperationClick = true;
         }
