@@ -44,6 +44,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/clear"
+            android:onClick="onNumberClick"
             style="@style/Gray.Button"
             android:text="@string/ac"/>
 
@@ -55,12 +56,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/interest"
+            android:onClick="onOperationClick"
             style="@style/Gray.Button"
             android:layout_marginEnd="18dp"
             android:text="@string/interest"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/division"
+            android:onClick="onOperationClick"
             style="@style/Orange.Button"
             android:text="@string/division"/>
 
@@ -96,6 +99,7 @@
 
             <com.google.android.material.button.MaterialButton
                 style="@style/Orange.Button"
+                android:onClick="onOperationClick"
                 android:id="@+id/multiply"
                 android:text="@string/multiply"/>
 
@@ -131,6 +135,8 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/minus"
+                android:onClick="onOperationClick"
+
                 style="@style/Orange.Button"
                 android:text="@string/minus"/>
 
@@ -184,7 +190,7 @@
                 style="@style/Black.Button"
                 android:onClick="onNumberClick"
                 android:id="@+id/zero"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:paddingEnd="0dp"
                 android:paddingStart="32dp"
                 android:textAlignment="textStart"
@@ -203,10 +209,7 @@
                 android:id="@+id/equals"
                 style="@style/Orange.Button"
                 android:text="@string/equals"/>
-
-
         </LinearLayout>
-
     </LinearLayout>
 
 
